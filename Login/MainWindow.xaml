@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<windowex:WindowEx
+    x:Class="Login.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Login"
+    xmlns:windowex="using:WinUIEx"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    MinHeight="670" MinWidth="480"
+    Height="670" Width="480">
+    <!-- Apply blur effect with AcrylicBrush -->
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="BaseAlt"/>
+    </Window.SystemBackdrop>
+    <Grid>
+        <Grid x:Name="AppTitleBar" Grid.Column="1" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <!-- 为图片定义自动宽度 -->
+                <ColumnDefinition Width="*"/>
+                <!-- 为标题文本定义自适应宽度 -->
+            </Grid.ColumnDefinitions>
+            <Image Source="D:\DESKTOP\winui3_Loginframe\Login\Assets\favicon.ico" 
+                   Width="25" Height="25"     
+                VerticalAlignment="Center"
+                   Margin="10,5,5,0"/>
+            <!-- 设置图片的边距 -->
+            <TextBlock x:Name="AppTitleTextBlock" Text="ND"
+                       TextWrapping="NoWrap"
+                       VerticalAlignment="Center"
+                       Margin="2,11,0,6"           
+                       Grid.Column="1"/>
+        </Grid>
+        <Grid>
+            <Frame x:Name="mainFrame" />
+        </Grid>
+        <!-- 内容区布局 -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0">
+
+            <!-- 图标 -->
+            <Image Source="D:\DESKTOP\winui3_Loginframe\Login\Assets\favicon.ico" 
+                   Width="60" 
+                   Height="60" 
+                   HorizontalAlignment="Center"
+                   Margin="0,100,0,0"/>
+
+            <!-- 图标下方的文字 -->
+            <TextBlock Text="WECOME" 
+                       FontSize="16" 
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
+            <!-- 用户名输入框 -->
+            <TextBox x:Name="UsernameTextBox"
+             PlaceholderText="                        用户名"
+             Width="250"
+             HorizontalAlignment="Center"
+             Margin="0,0,0,20"/>
+
+            <!-- 密码输入框 -->
+            <PasswordBox x:Name="PasswordBox"
+                 PlaceholderText="                          密码"
+                 Width="250"
+                 HorizontalAlignment="Center"
+                 KeyDown="PasswordBox_KeyDown"
+                 Margin="0,0,0,20"/>
+
+            <!-- 登录按钮 -->
+            <Button x:Name="LoginButton"
+            Style="{StaticResource AccentButtonStyle}"
+            Content="登录"
+            Width="100"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,20"
+            Click="LoginButton_Click"/>
+
+        </StackPanel>
+        <!-- 底部的“注册”和“更多功能” -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Margin="0,0,0,20">
+
+            <!-- 注册链接 -->
+            <HyperlinkButton Content="注册" 
+                             Click="RegisterButton_Click"
+                             Foreground="#aaaaaa"
+                             Margin="0,3,0,0" 
+                             />
+
+            <!-- 分隔符 -->
+            <TextBlock Text="|" 
+                       VerticalAlignment="Center"
+                       Margin="0,0"
+                       Foreground="#aaaaaa"
+                       />
+
+            <!-- 更多功能链接 -->
+            <HyperlinkButton Content="更多" 
+                             Click="MoreFeaturesButton_Click"
+                             Foreground="#aaaaaa"
+                             Margin="0,3,0,0" 
+                             />
+
+        </StackPanel>
+    </Grid>
+
+</windowex:WindowEx>
