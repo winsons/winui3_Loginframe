@@ -44,5 +44,13 @@ public partial class App : Application
         m_window.Activate();
     }
 
+    public void OpenNewWindow()
+    {
+        // 创建一个新的窗口实例
+        var newWindow = new BlankWindow1();
+        m_window.Close();
+        // 显示新窗口
+        newWindow.Activate();
+    }
     private Window m_window;
 }

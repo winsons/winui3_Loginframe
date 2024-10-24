@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Xaml.Media;
+using WinUIEx;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
@@ -15,7 +16,7 @@ namespace Login;
 /// <summary>
 /// An empty window that can be used on its own or navigated to within a Frame.
 /// </summary>
-public sealed partial class MainWindow
+public sealed partial class MainWindow : WindowEx
 {
     public MainWindow()
     {
@@ -54,6 +55,9 @@ public sealed partial class MainWindow
                 XamlRoot = this.Content.XamlRoot  // 设置 XamlRoot
             };
             await successDialog.ShowAsync(); // 弹出成功提示
+
+            // 打开新窗口
+            ((App)Application.Current).OpenNewWindow();
         }
         else
         {

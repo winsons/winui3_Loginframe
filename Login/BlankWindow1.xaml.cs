@@ -19,13 +19,14 @@ using Microsoft.UI.Xaml.Navigation;
 namespace Login
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BlankPage1 : Page
+    public sealed partial class BlankWindow1 : Window
     {
-        public BlankPage1()
+        public BlankWindow1()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+            ExtendsContentIntoTitleBar = true;
         }
     }
 }

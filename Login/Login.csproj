@@ -25,10 +25,19 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="BlankPage1.xaml" />
+    <None Remove="BlankWindow1.xaml" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\*.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="BlankPage1.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="BlankPage1.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,7 +56,7 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="BlankPage1.xaml">
+    <Page Update="BlankWindow1.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
