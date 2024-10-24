@@ -22,7 +22,7 @@
                 <ColumnDefinition Width="*"/>
                 <!-- 为标题文本定义自适应宽度 -->
             </Grid.ColumnDefinitions>
-            <Image Source="D:\DESKTOP\winui3_Loginframe\Login\Assets\favicon.ico" 
+            <Image x:Uid="CommonImagePath" 
                    Width="25" Height="25"     
                 VerticalAlignment="Center"
                    Margin="10,5,5,0"/>
@@ -40,7 +40,7 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0">
 
             <!-- 图标 -->
-            <Image Source="D:\DESKTOP\winui3_Loginframe\Login\Assets\favicon.ico" 
+            <Image x:Uid="CommonImagePath" 
                    Width="60" 
                    Height="60" 
                    HorizontalAlignment="Center"
